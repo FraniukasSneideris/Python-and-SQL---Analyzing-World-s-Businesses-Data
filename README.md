@@ -39,6 +39,8 @@ The project uses several CSV files that contain data on the world's oldest busin
 | category_code| Code for the business category                   |
 | category     | Description of the business category             |
 
+---
+
 ## Analysis Questions
 The dataset provides the foundation for answering the following questions:
 
@@ -129,6 +131,8 @@ oldest_by_continent_category.to_csv('oldest_by_continent_category.csv')
 ### Comparing methods
 Overall, SQL is the clear winner in terms of conciseness and simplicity for tasks involving data aggregation and joining. It allows me to quickly extract meaningful insights with minimal code. Python, on the other hand, excels in data manipulation flexibility and visualization capabilities, which are extremely valuable when further analyzing and presenting data. While SQL is easier and more concise for the core analysis, Python's ability to handle complex data manipulations and produce advanced visualizations (which I'll show in the "Results" section).
 
+---
+
 ## Results
 Now, what about the results? 
 Well, the same three tables are generated using the code I showed before. 
@@ -191,5 +195,15 @@ The following two graphics should be looked together in my opinion. Why? Because
 ![image](https://github.com/user-attachments/assets/c27b3d4c-f9b9-4599-96d5-55174213a785)
 ![image](https://github.com/user-attachments/assets/449bfdef-f6e4-438f-bc87-f6dfb32faf6b)
 
+---
+
+## Conclusion
+### Based on the data
+Based on the results, we can see clear patterns regarding the oldest businesses across continents. Asia and Europe host some of the oldest and most enduring businesses, with Kongō Gumi (578) in Japan and St. Peter Stifts Kulinarium (803) in Austria leading their respective continents. The diversity of business categories across continents also demonstrates that sectors like agriculture, banking, and postal services have remained significant for centuries. For instance, Mauritius Post (1772) in Africa and La Casa de Moneda de México (1534) in North America highlight the importance of essential services in maintaining long-term business sustainability.
+
+Furthermore, the countries lacking data on the oldest businesses indicate areas where further research is needed. Oceania stands out with the most countries missing business data, which may imply gaps in historical data availability or underreported businesses in that region.
+
+### Based on the analysis method
+As discussed before, SQL offers a more concise and straightforward approach for data analysis, especially when dealing with queries and large datasets, making it ideal for quickly deriving insights from structured data. However, Python excels in providing powerful visualization capabilities, which will be showcased later in the project, offering dynamic ways to interpret and present the data visually.
 
 
