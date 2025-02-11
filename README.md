@@ -177,14 +177,16 @@ Well, the same three tables are generated using the code I showed before.
 ### Graphic Results
 Please note, all graphics were done using Python, with matplotlib.pyplot and seaborn. For the code, please refer to "data_visualizations.py".
 
-![image](https://github.com/user-attachments/assets/194b50df-d609-4997-9d9e-0818f8278cd4)
+#### Evoulution of Businesses by Continent throughout the Years
+![image](https://github.com/user-attachments/assets/e0767191-825c-4a92-84ba-79835b4a1918)
 This graphic is particullary interesting because we can see in which continents the first businesses appeared. It makes perfect sense with the historic data we have, being that Asia and Europe were the first places to develop, and Africa the last to join the party. 
 
+#### Proportional Business Representation by Continent
+![image](https://github.com/user-attachments/assets/6ed898a6-77e7-4b79-9ef9-c0d8290d363c)
 
-![image](https://github.com/user-attachments/assets/c626c257-9a12-42ca-b0db-21135a89045a)
 A little bit of proportion here: here the data is coming from oldest_by_continent_category.csv, therefore it takes into account oldets businesses, but also from the graph we can take a better look at the quantity of businesses. For example, even though Africa developed late, the quantity of businesses it generated is quite high.
 
-
+#### Business Foundation Date by Category and Continent and Business Longevity by Category and Continent
 The following two graphics should be looked together in my opinion. Why? Because we can see for each continent and category the foundation date of businesses and also the longevity of those businesses. This is similar to the first line graphic, bet here it gets even more visual which continents started founding businesses first.
 ![image](https://github.com/user-attachments/assets/c27b3d4c-f9b9-4599-96d5-55174213a785)
 ![image](https://github.com/user-attachments/assets/449bfdef-f6e4-438f-bc87-f6dfb32faf6b)
