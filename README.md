@@ -192,7 +192,8 @@ A little bit of proportion here: here the data is coming from oldest_by_continen
 
 #### Business Foundation Date by Category and Continent and Business Longevity by Category and Continent
 The following two graphics should be looked together in my opinion. Why? Because we can see for each continent and category the foundation date of businesses and also the longevity of those businesses. This is similar to the first line graphic, bet here it gets even more visual which continents started founding businesses first.
-![image](https://github.com/user-attachments/assets/a4397f49-6c73-4f25-8896-fecebbecdfae)
+![image](https://github.com/user-attachments/assets/2736e823-26ae-4cd0-806d-2480fbe4c362)
+![image](https://github.com/user-attachments/assets/96d2943d-d90d-4a8e-9610-7a6d4dc22353)
 
 
 ---
