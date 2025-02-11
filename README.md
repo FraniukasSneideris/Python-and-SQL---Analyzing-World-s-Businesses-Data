@@ -54,6 +54,7 @@ The dataset provides the foundation for answering the following questions:
 ## Data Analysis
 ### 1) Finding the oldest business on each continent
 #### SQL analysis
+I used a combination of `JOIN` and `GROUP BY` statements to find the oldest business on each continent. The query is efficient, concise, and leverages SQL's ability to aggregate data in a straightforward manner with the `MIN()` function. The subquery within the `WHERE` clause ensures that only the oldest business for each continent is selected. This approach is quick to write and execute, especially when working with relational databases.
 ```sql
 SELECT b.business, 
        b.year_founded,
@@ -70,6 +71,7 @@ WHERE year_founded IN (SELECT MIN(b.year_founded)
 ORDER BY year_founded;
 ```
 #### Python analysis
+I used merge() to combine the businesses and countries dataframes, followed by groupby() to find the minimum founding year for each continent. After merging the results with the original dataframe, I extracted the necessary columns and sorted them by the founding year. Although Python allows more flexibility in data manipulation, the code is longer and requires multiple steps, which can make it harder to debug for complex operations.
 ```python
 businesses_countries = businesses.merge(countries, on='country_code')
 oldest_year_continent = businesses_countries.groupby('continent').min('year_founded')
@@ -79,6 +81,7 @@ oldest_business_continent.to_csv('oldest_business_continent.csv')
 ```
 ### 2) Finding how many countries per continent lack data on the oldest businesses
 #### SQL analysis
+SQL handles the task of counting countries missing business data efficiently with a LEFT JOIN and a WHERE clause to filter out countries that have no corresponding business data. The query is simple and returns the count of countries without businesses per continent in a single operation.
 ```sql
 SELECT co.continent, 
        COUNT(co.country) AS countries_without_businesses
@@ -91,6 +94,7 @@ WHERE b.business IS NULL
 GROUP BY co.continent;
 ```
 #### Python analysis
+I used pd.concat() to combine both the businesses and new_businesses dataframes, followed by a merge() with the countries dataframe. After filtering out rows where the business column is null, I used groupby() and count() to get the results. While this approach gives more control over how data is merged and filtered, it is more verbose and less intuitive for simple tasks like counting missing data.
 ```python
 businesses_all = pd.concat([businesses, new_businesses])
 businesses_all_countries = businesses_all.merge(countries, on='country_code', how='outer')
@@ -101,6 +105,7 @@ count_missing.to_csv('count_missing.csv')
 ```
 ### 3) Finding which business categories are best suited to last many years, and on what continent are they
 #### SQL analysis
+The SQL query used INNER JOIN to merge the businesses, categories, and countries tables, then grouped by continent and category to find the oldest founding year for each combination. The query is compact and powerful, providing the desired results in a single step.
 ```sql
 SELECT co.continent, 
        ca.category, 
@@ -114,9 +119,12 @@ GROUP BY co.continent, ca.category
 ORDER BY co.continent, ca.category;
 ```
 #### Python analysis
+I used merge() to combine the businesses, categories, and countries dataframes. Then, I used groupby() to calculate the oldest business year for each category and continent combination. Although Python provides more flexibility for additional analysis, this approach is less compact than the SQL version.
 ```python
 businesses_categories = businesses.merge(categories, on='category_code', how='inner')
 business_categories_countries = businesses_categories.merge(countries, on='country_code', how='inner')
 oldest_by_continent_category = business_categories_countries.groupby(['continent', 'category']).min('year_founded')
 oldest_by_continent_category.to_csv('oldest_by_continent_category.csv')
 ```
+### Comparing methods
+Overall, SQL is the clear winner in terms of conciseness and simplicity for tasks involving data aggregation and joining. It allows me to quickly extract meaningful insights with minimal code. Python, on the other hand, excels in data manipulation flexibility and visualization capabilities, which are extremely valuable when further analyzing and presenting data. While SQL is easier and more concise for the core analysis, Python's ability to handle complex data manipulations and produce advanced visualizations (which I'll show in the "Results" section).
