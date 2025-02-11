@@ -186,7 +186,7 @@ Please note, all graphics were done using Python, with matplotlib.pyplot and sea
 This graphic is particullary interesting because we can see in which continents the first businesses appeared. It makes perfect sense with the historic data we have, being that Asia and Europe were the first places to develop, and Africa the last to join the party. 
 
 #### Proportional Business Representation by Continent
-![image](https://github.com/user-attachments/assets/6ed898a6-77e7-4b79-9ef9-c0d8290d363c)
+![image](https://github.com/user-attachments/assets/e01ee0f2-7183-4e0e-bb7d-d05d1ac5c517)
 
 A little bit of proportion here: here the data is coming from oldest_by_continent_category.csv, therefore it takes into account oldets businesses, but also from the graph we can take a better look at the quantity of businesses. For example, even though Africa developed late, the quantity of businesses it generated is quite high.
 
