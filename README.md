@@ -130,8 +130,11 @@ oldest_by_continent_category.to_csv('oldest_by_continent_category.csv')
 Overall, SQL is the clear winner in terms of conciseness and simplicity for tasks involving data aggregation and joining. It allows me to quickly extract meaningful insights with minimal code. Python, on the other hand, excels in data manipulation flexibility and visualization capabilities, which are extremely valuable when further analyzing and presenting data. While SQL is easier and more concise for the core analysis, Python's ability to handle complex data manipulations and produce advanced visualizations (which I'll show in the "Results" section).
 
 ## Results
+Now, what about the results? 
+Well, the same three tables are generated using the code I showed before. 
 
-### Oldest Businesses by Continent
+### Raw results
+#### Oldest Businesses by Continent
 
 | Business                         | Year Founded | Country     | Continent     |
 |----------------------------------|--------------|-------------|---------------|
@@ -142,7 +145,7 @@ Overall, SQL is the clear winner in terms of conciseness and simplicity for task
 | Mauritius Post                   | 1772         | Mauritius   | Africa        |
 | Australia Post                   | 1809         | Australia   | Oceania       |
 
-### Countries Without Data on the Oldest Businesses
+#### Countries Without Data on the Oldest Businesses
 
 | Continent         | Countries Without Businesses |
 |-------------------|------------------------------|
@@ -153,7 +156,7 @@ Overall, SQL is the clear winner in terms of conciseness and simplicity for task
 | Oceania          | 10                           |
 | South America    | 3                            |
 
-### Best Business Categories for Longevity by Continent
+#### Best Business Categories for Longevity by Continent
 
 | Continent     | Category                               | Year Founded |
 |---------------|----------------------------------------|--------------|
@@ -168,49 +171,6 @@ Overall, SQL is the clear winner in terms of conciseness and simplicity for task
 |               | Mining                                 | 1962         |
 |               | Postal Service                         | 1772         |
 | Asia          | Agriculture                            | 1930         |
-|               | Aviation & Transport                   | 1858         |
-|               | Banking & Finance                      | 1830         |
-|               | Cafés, Restaurants & Bars              | 1153         |
-|               | Conglomerate                           | 1841         |
-|               | Construction                           | 578          |
-|               | Defense                                | 1808         |
-|               | Distillers, Vintners, & Breweries      | 1853         |
-|               | Energy                                 | 1928         |
-|               | Food & Beverages                       | 1820         |
-|               | Manufacturing & Production             | 1736         |
-|               | Media                                  | 1931         |
-|               | Mining                                 | 1913         |
-|               | Postal Service                         | 1800         |
-|               | Retail                                 | 1883         |
-|               | Telecommunications                     | 1885         |
-|               | Tourism & Hotels                       | 1584         |
-| Europe        | Agriculture                            | 1218         |
-|               | Banking & Finance                      | 1606         |
-|               | Cafés, Restaurants & Bars              | 803          |
-|               | Consumer Goods                         | 1649         |
-|               | Defense                                | 1878         |
-|               | Distillers, Vintners, & Breweries      | 862          |
-|               | Manufacturing & Production             | 864          |
-|               | Media                                  | 1999         |
-|               | Medical                                | 1422         |
-|               | Mining                                 | 1248         |
-|               | Postal Service                         | 1520         |
-|               | Telecommunications                     | 1912         |
-|               | Tourism & Hotels                       | 1230         |
-| North America | Agriculture                            | 1638         |
-|               | Aviation & Transport                   | 1870         |
-|               | Banking & Finance                      | 1891         |
-|               | Distillers, Vintners, & Breweries      | 1703         |
-|               | Food & Beverages                       | 1920         |
-|               | Manufacturing & Production             | 1534         |
-|               | Media                                  | 1909         |
-|               | Retail                                 | 1670         |
-|               | Tourism & Hotels                       | 1770         |
-| Oceania        | Banking & Finance                      | 1861         |
-|               | Postal Service                         | 1809         |
-| South America | Banking & Finance                      | 1565         |
-|               | Cafés, Restaurants & Bars              | 1877         |
-|               | Defense                                | 1811         |
-|               | Food & Beverages                       | 1660         |
-|               | Manufacturing & Production             | 1621         |
+....
+(please refer to "oldest_by_continent_category.csv" for the rest of the table)
 
