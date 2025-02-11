@@ -138,7 +138,7 @@ Now, what about the results?
 Well, the same three tables are generated using the code I showed before. 
 
 ### Raw results
-#### Oldest Businesses by Continent
+#### Oldest Businesses by Continent (oldest_business_continent)
 
 | Business                         | Year Founded | Country     | Continent     |
 |----------------------------------|--------------|-------------|---------------|
@@ -149,7 +149,7 @@ Well, the same three tables are generated using the code I showed before.
 | Mauritius Post                   | 1772         | Mauritius   | Africa        |
 | Australia Post                   | 1809         | Australia   | Oceania       |
 
-#### Countries Without Data on the Oldest Businesses
+#### Countries Without Data on the Oldest Businesses (count_missing)
 
 | Continent         | Countries Without Businesses |
 |-------------------|------------------------------|
@@ -160,7 +160,7 @@ Well, the same three tables are generated using the code I showed before.
 | Oceania          | 10                           |
 | South America    | 3                            |
 
-#### Best Business Categories for Longevity by Continent
+#### Best Business Categories for Longevity by Continent (oldest_by_continent_category)
 
 | Continent     | Category                               | Year Founded |
 |---------------|----------------------------------------|--------------|
