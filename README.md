@@ -52,8 +52,8 @@ The dataset provides the foundation for answering the following questions:
    I will create a DataFrame named `oldest_by_continent_category` that stores the oldest founding year for each continent and business category combination. This will contain columns: `continent`, `category`, and `year_founded`.
 
 ## Data Analysis
-### Finding the oldest business on each continent
-#### SQL
+### 1) Finding the oldest business on each continent
+#### SQL analysis
 ```sql
 SELECT b.business, 
        b.year_founded,
@@ -69,7 +69,7 @@ WHERE year_founded IN (SELECT MIN(b.year_founded)
                        GROUP BY co.continent)
 ORDER BY year_founded;
 ```
-#### Python
+#### Python analysis
 ```python
 businesses_countries = businesses.merge(countries, on='country_code')
 oldest_year_continent = businesses_countries.groupby('continent').min('year_founded')
@@ -77,4 +77,46 @@ oldest_business_continent = businesses_countries.merge(oldest_year_continent, on
 oldest_business_continent = oldest_business_continent.set_index('business')
 oldest_business_continent.to_csv('oldest_business_continent.csv')
 ```
-
+### 2) Finding how many countries per continent lack data on the oldest businesses
+#### SQL analysis
+```sql
+SELECT co.continent, 
+       COUNT(co.country) AS countries_without_businesses
+FROM countries AS co
+LEFT JOIN (SELECT * FROM businesses
+           UNION
+           SELECT * FROM new_businesses) AS b
+USING (country_code)
+WHERE b.business IS NULL
+GROUP BY co.continent;
+```
+#### Python analysis
+```python
+businesses_all = pd.concat([businesses, new_businesses])
+businesses_all_countries = businesses_all.merge(countries, on='country_code', how='outer')
+filtered = businesses_all_countries[businesses_all_countries['business'].isnull()]
+count_missing = filtered.groupby('continent')['country'].count().reset_index(name='countries_without_businesses')
+count_missing = count_missing.set_index('continent')
+count_missing.to_csv('count_missing.csv')
+```
+### 3) Finding which business categories are best suited to last many years, and on what continent are they
+#### SQL analysis
+```sql
+SELECT co.continent, 
+       ca.category, 
+	   MIN(b.year_founded) AS year_founded
+FROM businesses b
+INNER JOIN categories AS ca 
+ON b.category_code = ca.category_code
+INNER JOIN countries AS co 
+ON b.country_code = co.country_code
+GROUP BY co.continent, ca.category
+ORDER BY co.continent, ca.category;
+```
+#### Python analysis
+```python
+businesses_categories = businesses.merge(categories, on='category_code', how='inner')
+business_categories_countries = businesses_categories.merge(countries, on='country_code', how='inner')
+oldest_by_continent_category = business_categories_countries.groupby(['continent', 'category']).min('year_founded')
+oldest_by_continent_category.to_csv('oldest_by_continent_category.csv')
+```
