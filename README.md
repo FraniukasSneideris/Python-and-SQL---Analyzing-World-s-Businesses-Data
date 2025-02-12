@@ -5,20 +5,20 @@ Analyzing Data with 2 Different Programming Languages: SQL vs Python
 In this project, I aimed to explore and analyze a dataset containing information about the oldest businesses across the world. The dataset has been compiled by BusinessFinancing.co.uk and contains information from various countries, providing insights into businesses that have lasted for centuries. By analyzing the data in two different programming languages—SQL and Python—I compare how each approach handles data manipulation, aggregation, and analysis tasks.
 
 ### Business Context
-One of the oldest businesses in the world is the Staffelter Hof Winery, established in 862 under the Carolingian dynasty. This winery has survived through dramatic historical changes, including the rise and fall of empires, and continues to serve customers today. What makes a business endure such turbulent times? This question is central to my analysis, and through this project, I aim to uncover patterns and insights about longevity across business categories and continents.
+One of the oldest businesses in the world is the Staffelter Hof Winery, established in 862 under the Carolingian dynasty. This winery has survived through dramatic historical changes, including the rise and fall of empires, and continues to serve customers today. What makes a business endure such turbulent times? This question is central to my analysis, and through this project, I aim to uncover insights about longevity across business categories and continents.
 
 ### Data Sources
-The project uses several CSV files that contain data on the world's oldest businesses, which have been cleaned and structured for analysis.
+The project uses four CSV files that contain data on the world's oldest businesses, which have been cleaned and structured for analysis.
 
 #### Files:
-- `data/businesses.csv` — Contains information on businesses, including their name, founding year, and category code.
-- `data/new_businesses.csv` — Contains data on new businesses.
-- `data/countries.csv` — Provides country details, including the ISO country code and continent.
-- `data/categories.csv` — Provides a description for each business category based on the category code.
+- `businesses.csv` — Contains information on businesses, including their name, founding year, and category code.
+- `new_businesses.csv` — Contains data on new businesses.
+- `countries.csv` — Provides country details, including the ISO country code and continent.
+- `categories.csv` — Provides a description for each business category based on the category code.
 
 #### Columns:
 
-**businesses.csv**:
+**businesses.csv and new_businesses.csv**:
 | Column        | Description                                      |
 |---------------|--------------------------------------------------|
 | business      | Name of the business                             |
@@ -45,13 +45,13 @@ The project uses several CSV files that contain data on the world's oldest busin
 The dataset provides the foundation for answering the following questions:
 
 1. **What is the oldest business on each continent?**
-   I identify the oldest business for each continent, displaying its country, name, and founding year. The resulting DataFrame, `oldest_business_continent`, will contain columns: `continent`, `country`, `business`, and `year_founded`.
+   Identify the oldest business for each continent, displaying its country, name, and founding year. The resulting DataFrame, `oldest_business_continent`, will contain columns: `continent`, `country`, `business`, and `year_founded`.
 
 2. **How many countries per continent lack data on the oldest businesses?**
-   I will count the number of countries per continent that lack business data, both with and without the inclusion of `new_businesses`. This will help determine whether including new businesses changes the landscape of missing data. The results will be stored in a DataFrame named `count_missing` with columns `continent` and `countries_without_businesses`.
+   Count the number of countries per continent that lack business data, both with and without the inclusion of `new_businesses`. This will help determine whether including new businesses changes the landscape of missing data. The results will be stored in a DataFrame named `count_missing` with columns `continent` and `countries_without_businesses`.
 
 3. **Which business categories are best suited to last many years, and on what continent are they?**
-   I will create a DataFrame named `oldest_by_continent_category` that stores the oldest founding year for each continent and business category combination. This will contain columns: `continent`, `category`, and `year_founded`.
+   Create a DataFrame named `oldest_by_continent_category` that stores the oldest founding year for each continent and business category combination. This will contain columns: `continent`, `category`, and `year_founded`.
 
 ## Data Analysis
 ### 1) Finding the oldest business on each continent
@@ -205,6 +205,6 @@ Based on the results, we can see clear patterns regarding the oldest businesses 
 Furthermore, the countries lacking data on the oldest businesses indicate areas where further research is needed. Oceania stands out with the most countries missing business data, which may imply gaps in historical data availability or underreported businesses in that region.
 
 ### Based on the analysis method
-As discussed before, SQL offers a more concise and straightforward approach for data analysis, especially when dealing with queries and large datasets, making it ideal for quickly deriving insights from structured data. However, Python excels in providing powerful visualization capabilities, which will be showcased later in the project, offering dynamic ways to interpret and present the data visually.
+As discussed before, SQL offers a more concise and straightforward approach for data analysis, especially when dealing with queries and large datasets, making it ideal for quickly deriving insights from structured data. However, Python excels in providing powerful visualization capabilities, offering dynamic ways to interpret and present the data visually.
 
 
