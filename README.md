@@ -188,7 +188,7 @@ This graphic is particullary interesting because we can see in which continents 
 #### Proportional Business Representation by Continent
 ![image](https://github.com/user-attachments/assets/e01ee0f2-7183-4e0e-bb7d-d05d1ac5c517)
 
-A little bit of proportion here: here the data is coming from oldest_by_continent_category.csv, therefore it takes into account oldets businesses, but also from the graph we can take a better look at the quantity of businesses. For example, even though Africa developed late, the quantity of businesses it generated is quite high.
+A little bit of proportion here: here the data is coming from oldest_by_continent_category.csv, therefore it takes into account oldets businesses, but also from the graph we can take a better look at the quantity of businesses. For example, even though Africa developed late, the quantity of businesses it generated is quite high. This also shows that there might be missing data in continents like Oceania.
 
 #### Business Foundation Date by Category and Continent and Business Longevity by Category and Continent
 The following two graphics should be looked together in my opinion. Why? Because we can see for each continent and category the foundation date of businesses and also the longevity of those businesses. This is similar to the first line graphic, bet here it gets even more visual which continents started founding businesses first.
