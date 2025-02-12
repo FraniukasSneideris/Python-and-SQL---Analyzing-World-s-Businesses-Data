@@ -135,7 +135,7 @@ Overall, SQL is the clear winner in terms of conciseness and simplicity for task
 
 ## Results
 Now, what about the results? 
-Well, the same three tables are generated using the code I showed before. 
+Well, the following results are obtained using either of the methods showed before. 
 
 ### Raw results
 #### Oldest Businesses by Continent (oldest_business_continent)
