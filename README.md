@@ -1,5 +1,5 @@
 # Python-and-SQL---Analyzing-World-s-Businesses-Data
-Analyzing Data with 2 Different Programming Languages: SQL vs Python
+Analyzing Data with Two Different Programming Languages: SQL vs Python
 
 ## Project Overview
 In this project, I aimed to explore and analyze a dataset containing information about the oldest businesses across the world. The dataset has been compiled by BusinessFinancing.co.uk and contains information from various countries, providing insights into businesses that have lasted for centuries. By analyzing the data in two different programming languages—SQL and Python—I compare how each approach handles data manipulation, aggregation, and analysis tasks.
